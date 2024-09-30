@@ -1,20 +1,43 @@
 {
   "name": "sv-table",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/sv-table.umd.js",
+  "module": "dist/sv-table.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "ant-design-vue",
+    "pro-table"
+  ],
+  "author": "",
+  "license": "ISC",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc -b && vite build",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.4.29"
+    "lodash-es": "^4.17.21",
+    "moment": "^2.30.1",
+    "vue-router": "^4.4.5"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^5.0.5",
-    "typescript": "^5.2.2",
-    "vite": "^5.3.1",
-    "vue-tsc": "^2.0.21"
+    "@ant-design/icons-vue": "^6.0.1",
+    "@types/lodash-es": "^4.17.12",
+    "@vitejs/plugin-vue": "^5.1.4",
+    "@vue/composition-api": "^1.7.2",
+    "rollup-plugin-visualizer": "^5.12.0",
+    "typescript": "^5.6.2",
+    "vite": "^5.4.8",
+    "vite-plugin-dts": "^4.2.2"
+  },
+  "peerDependencies": {
+    "ant-design-vue": "2.2.8",
+    "vue": "^3.2.21",
+    "vue-types": "^4.1.1",
+    "path": "^0.12.7"
   }
 }
