@@ -142,12 +142,12 @@ const props = defineProps({
   },
   /** 数据加载完成执行 */
   onLoad: {
-    type: Function as PropType<(arr) => void>,
+    type: Function as PropType<(arr:Array<any>) => void>,
     default: () => {},
   },
   /** 数据加载失败时出触发 */
   onRequestError: {
-    type: Function as PropType<(arr) => void>,
+    type: Function as PropType<(arr:Array<any>) => void>,
   },
   /** 页面配置 */
   pagination: {

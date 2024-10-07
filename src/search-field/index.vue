@@ -93,7 +93,7 @@
               v-else
               :name="`sv_search_${item.renderSlot}`"
               :config="{
-                ref: formInfo,
+                ref: formRef,
                 filters,
                 filterProps,
                 realReq,
@@ -108,7 +108,7 @@
         <a-space class="search-bar">
           <slot
             name="sv_search"
-            :config="{ ref: formInfo, filters, filterProps, realReq, apiParam }"
+            :config="{ ref: formRef, filters, filterProps, realReq, apiParam }"
           ></slot>
           <a-button type="dashed" @click="onReset">
             <RedoOutlined /> {{ props.searchConfig.resetText }}
@@ -134,7 +134,7 @@
   </div>
 </template>
 
-<script lang="ts" setup generic="T exends Record<string,any>">
+<script lang="ts" setup generic="T extends Record<string,any>">
 import {  reactive, ref, watchEffect, toRefs, PropType } from "vue";
 import {
   UpOutlined,
@@ -157,7 +157,7 @@ import { itemVisible, selectFilterName, buildFieldProps } from "./utils";
 
 const emit = defineEmits(["query"]);
 const props = defineProps({
-  columns: { type: Array as PropType<IColumnWithFilterConfig[]> },
+  columns: { type: Array as PropType<IColumnWithFilterConfig<T>[]> },
   searchConfig: { type: Object as PropType<ISearchConfig>, required: true },
 });
 

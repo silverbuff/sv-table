@@ -128,7 +128,7 @@ export const useBuildSearchInfo = (searchFieldRef: any) => {
       ref: searchFieldRef.value?.formRef,
       filters: searchFieldRef.value?.filters,
       realReq: searchFieldRef.value?.realReq,
-      apiParam: searchFieldRef.value.apiParam,
+      apiParam: searchFieldRef.value?.apiParam,
     };
   });
 };
